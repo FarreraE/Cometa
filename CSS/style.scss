@@ -18,7 +18,7 @@
     --Color_White: #ffffff;
 }
 
-@keyframes rotation {
+@keyframes spin {
     from {
         transform: rotate(0deg);
     }
@@ -26,6 +26,12 @@
         transform: rotate(359deg);
     }
 }
+
+@keyframes gravity {
+    0% { transform: translateY(20px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(20px); }
+  }
 
 @mixin backgroundFeature {
     background-repeat: no-repeat;
@@ -80,6 +86,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
     //width: 100%;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: hidden;
 }
 
 //---- LANDING SECTION
@@ -119,7 +126,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
             justify-content: center;
             align-items: flex-start;
             z-index: 1;
-
+            animation:gravity 8s linear infinite;
             .logo {
                 width: 60%;
                 margin-left: 25%;
@@ -176,12 +183,14 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
     @include backgroundFeature;
     background-image: url("../img/2846826.svg");
     //---- DEFINITION SECTION
+    padding-top: 20%;
     .definitionSection {
         // background-color: red;
         color: var(--Color_AuxSec);
         text-align: center;
-        padding-top: 20%;
-        font-size: smaller;
+    
+        font-size: 0.6rem;
+        scale: 1.3;
         .img {
             width: 100%;
             opacity: 0.3;
@@ -197,7 +206,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         margin-top: 20%;
         @include flex-row();
         @include backgroundFeature;
-        background-image: url("../img/espaciobkg4.svg");
+        background-image: url("../img/espaciobkg3.svg");
         padding-top: 10%;
         padding-bottom: 5%;
         .text {
@@ -220,6 +229,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
             }
         }
         .img {
+            animation:gravity 15s linear infinite;
             width: 0%;
         }
     }
@@ -321,6 +331,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 
             .packSection2Top {
                 padding-bottom: 2%;
+                
                 .packSection2A {
                     h3 {
                         font-size: 5rem;
@@ -333,6 +344,14 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
                         padding-right: 5%;
                         color: var(--Color_AuxSec);
                         font-size: 1.4rem;
+                    }
+                }
+                .packSection2B {
+                    @include reset-MarginPadding();
+                    text-align: center;
+                    animation:spin 20s linear infinite;
+                    .img {
+                        width: 50%;
                     }
                 }
             }
@@ -352,9 +371,8 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         }
         //---- Pack Section 3
         .packSection3 {
-            padding: 1%;
-            @include flex-column();
-            justify-content: space-between;
+          padding: 1%;
+            display: none !important;
             .packSection3Btn {
                 @include flex-column();
                 @include borderFeature();
@@ -394,7 +412,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         color: var(--Color_White);
         border: none;
         @include backgroundFeature();
-        background-image: url("../img/espaciobkg4.svg");
+        background-image: url("../img/espaciobkg.svg");
         color: var(--Color_White);
         //background-color: blue;
         h3 {
@@ -714,7 +732,7 @@ footer {
         }
 
         .logo {
-            max-width: 0%;
+            max-width: 6%;
         }
     }
     //---- MAIN CONTAINER
@@ -730,6 +748,7 @@ footer {
             color: var(--Color_AuxSec);
             text-align: center;
             padding-top: 20%;
+            scale: 1;
             .img {
                 width: 100%;
                 opacity: 0.3;
@@ -900,7 +919,8 @@ footer {
             }
             //---- Pack Section 3
             .packSection3 {
-                padding: 1%;
+               padding: 1%;
+               display: flex !important;
                 @include flex-row();
                 justify-content: space-between;
                 .packSection3Btn {
@@ -1191,6 +1211,7 @@ footer {
         align-items: center;
         .landingRow {
             .textSection {
+                margin-top: 0%;
                 h2 {
                     font-size: 1.5rem;
                     letter-spacing: 0.6rem;
@@ -1207,6 +1228,7 @@ footer {
                 .logo {
                     margin-left: 0%;
                     width: 100%;
+                    scale: 1.1;
                 }
             }
         }

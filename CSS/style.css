@@ -78,9 +78,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: center;
 }
 
 .landingSection .landingRow {
@@ -90,6 +88,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .landingSection .landingRow .textSection {
+  margin-top: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,7 +236,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("../img/espaciobkg3.svg");
+  background-image: url("../img/espaciobkg4.svg");
   padding-top: 10%;
   padding-bottom: 5%;
 }
@@ -424,7 +423,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .packSection .packSection2 .packSection2C {
-  font-size: 1.6rem;
+  font-size: smaller;
   text-align: center;
   letter-spacing: 0.3rem;
   color: var(--Color_White);
@@ -477,7 +476,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   align-items: center;
   margin-top: 20%;
   height: 60%;
-  width: 80%;
+  width: 60%;
 }
 
 .mainContainer .packSection .packSection3 .packSection3Btn h4 {
@@ -512,7 +511,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("../img/espaciobkg2.svg");
+  background-image: url("../img/espaciobkg4.svg");
   color: var(--Color_White);
 }
 
@@ -941,7 +940,6 @@ footer .navBarSection {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("../img/2846826.svg");
   }
   .mainContainer .definitionSection {
     color: var(--Color_AuxSec);
@@ -1218,7 +1216,6 @@ footer .navBarSection {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("../img/espaciobkg2.svg");
     color: var(--Color_White);
   }
   .mainContainer .clientSection h3 {
@@ -1578,7 +1575,61 @@ footer .navBarSection {
   .mainContainer .packSection .packSection1 .container p {
     padding-top: 8%;
     padding-bottom: 8%;
-    font-size: 1.4rem;
+    font-size: medium;
+  }
+  .mainContainer .packSection .packSection2 {
+    padding: 0%;
+    margin: 0%;
+    border: 0.05rem solid var(--Color_AuxMain);
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .mainContainer .packSection .packSection2 .sTop {
+    margin-top: -1%;
+    margin-bottom: 2%;
+  }
+  .mainContainer .packSection .packSection2 .sbottom {
+    height: 10%;
+    margin-top: 1%;
+  }
+  .mainContainer .packSection .packSection2 .packSection2Top {
+    padding-bottom: 2%;
+  }
+  .mainContainer .packSection .packSection2 .packSection2Top .packSection2A h3 {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    text-shadow: 1px 1px 10px var(--Color_AuxSec);
+    text-align: center;
+  }
+  .mainContainer .packSection .packSection2 .packSection2Top .packSection2A p {
+    margin-top: 2%;
+    width: 95%;
+    text-align: justify;
+    padding-right: 0%;
+    color: var(--Color_AuxSec);
+    font-size: large;
+  }
+  .mainContainer .packSection .packSection2 .packSection2B {
+    padding: 0%;
+    margin: 0%;
+    text-align: center;
+  }
+  .mainContainer .packSection .packSection2 .packSection2B .img {
+    width: 50%;
+  }
+  .mainContainer .packSection .packSection2 .packSection2C {
+    font-size: large;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    color: var(--Color_White);
+    text-shadow: 1px 1px 2px var(--Color_AuxSec);
+    margin-top: 2%;
+  }
+  .mainContainer .packSection .packSection2 .packSection2C .white {
+    color: var(--Color_30);
+    font-weight: bolder;
+    opacity: 0.8;
+    text-shadow: 0px 0px 0px var(--Color_AuxSec);
   }
   .mainContainer .packSection .packSection3 .packSection3Btn h4 {
     font-size: 1.2rem;
@@ -1586,9 +1637,39 @@ footer .navBarSection {
   .mainContainer .packSection .packSection3 .packSection3Btn h3 {
     font-size: 2rem;
   }
+  .mainContainer .section_3X3AboutUs .imgClassB {
+    margin-left: 0%;
+    width: 90%;
+  }
+  .mainContainer .section_3X3AboutUs .imgClass {
+    scale: 1;
+  }
   .mainContainer .section_3X3AboutUs h4 {
+    margin-top: 5%;
+    font-size: large;
+    letter-spacing: 0rem;
+  }
+  .mainContainer .section_3X3AboutUs .section_3X3_1 {
+    margin-left: 2%;
+    margin-right: 0%;
+  }
+  .mainContainer .section_3X3AboutUs .section_3X3_1 h4 {
+    padding-right: 10%;
+  }
+  .mainContainer .section_3X3AboutUs .section_3X3_2 {
+    margin-bottom: 0%;
+    padding-top: 3%;
+  }
+  .mainContainer .section_3X3AboutUs .section_3X3_2 h4 {
+    margin-top: 3%;
     font-size: medium;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0rem;
+  }
+  .mainContainer .section_3X3AboutUs .section_3X3_3 {
+    margin-left: -2%;
+  }
+  .mainContainer .section_3X3AboutUs .section_3X3_3 h4 {
+    padding-left: 15%;
   }
 }
 
@@ -1760,36 +1841,6 @@ footer .navBarSection {
   }
   .mainContainer .packSection .packSection3 .packSection3Btn h3 {
     font-size: xx-large;
-  }
-  .mainContainer .section_3X3AboutUs .imgClassB {
-    margin-left: 0%;
-  }
-  .mainContainer .section_3X3AboutUs .imgClass {
-    scale: 0.9;
-  }
-  .mainContainer .section_3X3AboutUs h4 {
-    margin-top: 5%;
-    font-size: medium;
-    letter-spacing: 0rem;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_1 {
-    margin-left: 2%;
-    margin-right: 0%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_1 h4 {
-    padding-right: 10%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_2 {
-    margin-bottom: 0%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_2 h4 {
-    margin-top: 2%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_3 {
-    margin-left: -2%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_3 h4 {
-    padding-left: 15%;
   }
   .mainContainer .formSection {
     font-size: medium;

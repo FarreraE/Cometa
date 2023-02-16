@@ -89,11 +89,12 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
     @include backgroundFeature;
     background-image: url("../img/espaciobkg4.svg");
     @include flex-row();
-    align-items: flex-end;
+    align-items: center;
     // background-color: yellow;
     .landingRow {
         justify-content: end;
         .textSection {
+            margin-top: 25%;
             @include flex-column();
             justify-content: center;
             align-items: center;
@@ -196,7 +197,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         margin-top: 20%;
         @include flex-row();
         @include backgroundFeature;
-        background-image: url("../img/espaciobkg3.svg");
+        background-image: url("../img/espaciobkg4.svg");
         padding-top: 10%;
         padding-bottom: 5%;
         .text {
@@ -336,7 +337,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
                 }
             }
             .packSection2C {
-                font-size: 1.6rem;
+                font-size: smaller;
                 text-align: center;
                 letter-spacing: 0.3rem;
                 color: var(--Color_White);
@@ -361,7 +362,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
                 align-items: center;
                 margin-top: 20%;
                 height: 60%;
-                width: 80%;
+                width: 60%;
                 h4 {
                     font-size: 1.4rem;
                     margin-top: -5%;
@@ -369,7 +370,6 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
                     color: var(--Color_AuxMain);
                     width: 80%;
                     text-align: center;
-                  
                 }
                 h3 {
                     background-color: var(--Color_60);
@@ -394,7 +394,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         color: var(--Color_White);
         border: none;
         @include backgroundFeature();
-        background-image: url("../img/espaciobkg2.svg");
+        background-image: url("../img/espaciobkg4.svg");
         color: var(--Color_White);
         //background-color: blue;
         h3 {
@@ -724,7 +724,6 @@ footer {
         border-radius: 2em;
         @include reset-MarginPadding;
         @include backgroundFeature;
-        background-image: url("../img/2846826.svg");
         //---- DEFINITION SECTION
         .definitionSection {
             // background-color: red;
@@ -942,7 +941,6 @@ footer {
             color: var(--Color_White);
             border: none;
             @include backgroundFeature();
-            background-image: url("../img/espaciobkg2.svg");
             color: var(--Color_White);
             //background-color: blue;
             h3 {
@@ -1255,7 +1253,64 @@ footer {
                     p {
                         padding-top: 8%;
                         padding-bottom: 8%;
-                        font-size: 1.4rem;
+                        font-size: medium;
+                    }
+                }
+            }
+            .packSection2 {
+                @include reset-MarginPadding();
+                @include borderFeature();
+                padding-left: 2%;
+                padding-right: 2%;
+    
+                .sTop {
+                    margin-top: -1%;
+                    margin-bottom: 2%;
+                }
+                .sbottom {
+                    height: 10%;
+                    margin-top: 1%;
+                }
+    
+                .packSection2Top {
+                    padding-bottom: 2%;
+                    .packSection2A {
+                        h3 {
+                            font-size: 4rem;
+                            letter-spacing: 0.5rem;
+                            text-shadow: 1px 1px 10px var(--Color_AuxSec);
+                            text-align: center;
+                            
+                        }
+                        p {
+                            margin-top: 2%;
+                            width: 95%;
+                            text-align: justify;
+                            padding-right: 0%;
+                            color: var(--Color_AuxSec);
+                            font-size: large;
+                        }
+                    }
+                }
+                .packSection2B {
+                    @include reset-MarginPadding();
+                    text-align: center;
+                    .img {
+                        width: 50%;
+                    }
+                }
+                .packSection2C {
+                    font-size: large;
+                    text-align: center;
+                    letter-spacing: 0.1rem;
+                    color: var(--Color_White);
+                    text-shadow: 1px 1px 2px var(--Color_AuxSec);
+                    margin-top: 2%;
+                    .white {
+                        color: var(--Color_30);
+                        font-weight: bolder;
+                        opacity: 0.8;
+                        text-shadow: 0px 0px 0px var(--Color_AuxSec);
                     }
                 }
             }
@@ -1276,9 +1331,41 @@ footer {
         //HERE
         //---- ABOUT US SECTION
         .section_3X3AboutUs {
+            .imgClassB {
+                margin-left: 0%;
+                width: 90%;
+            }
+            .imgClass {
+                scale: 1;
+            }
             h4 {
-                font-size: medium;
-                letter-spacing: 0.1rem;
+                margin-top: 5%;
+                font-size: large;
+                letter-spacing: 0rem;
+            }
+            .section_3X3_1 {
+                margin-left: 2%;
+                margin-right: 0%;
+                h4 {
+                    padding-right: 10%;
+                }
+            }
+
+            .section_3X3_2 {
+                margin-bottom: 0%;
+                padding-top: 3%;
+                h4 {
+                    margin-top: 3%;
+                    font-size: medium;
+                    letter-spacing: 0rem;
+                }
+            }
+
+            .section_3X3_3 {
+                margin-left: -2%;
+                h4 {
+                    padding-left: 15%;
+                }
             }
         }
     }
@@ -1340,7 +1427,7 @@ footer {
             //---- Pack Section 1
             padding: 0%;
             display: block;
-            
+
             .packSection1 {
                 padding: 0%;
                 .container {
@@ -1394,7 +1481,7 @@ footer {
                         justify-content: center;
                         align-items: flex-start;
 
-                       // background-color: #cc1c4a;
+                        // background-color: #cc1c4a;
                         .img {
                             width: 90%;
                         }
@@ -1437,41 +1524,7 @@ footer {
 
         // CLIENT SECTION MISSING
         //HERE
-        //---- ABOUT US SECTION
-        .section_3X3AboutUs {
-            .imgClassB {
-                margin-left: 0%;
-            }
-            .imgClass {
-                scale: 0.9;
-            }
-            h4 {
-                margin-top: 5%;
-                font-size: medium;
-                letter-spacing: 0rem;
-            }
-            .section_3X3_1 {
-                margin-left: 2%;
-                margin-right: 0%;
-                h4 {
-                    padding-right: 10%;
-                }
-            }
-
-            .section_3X3_2 {
-                margin-bottom: 0%;
-                h4 {
-                    margin-top: 2%;
-                }
-            }
-
-            .section_3X3_3 {
-                margin-left: -2%;
-                h4 {
-                    padding-left: 15%;
-                }
-            }
-        }
+        
         //FORM SECTION
         .formSection {
             font-size: medium;

@@ -65,6 +65,22 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   background-size: cover;
   background-attachment: fixed;
   background-image: url("../img/espaciobkg4.svg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .landingSection .landingRow {
@@ -90,7 +106,6 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   justify-content: center;
   align-items: center;
   z-index: 888;
-  height: 80vh;
 }
 
 .landingSection .landingRow .textSection h2 {
@@ -121,18 +136,16 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  z-index: 1;
-  margin-top: -40%;
-  display: flex;
   justify-content: center;
-  text-align: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: 1;
 }
 
 .landingSection .landingRow .logoContainer .logo {
-  width: 50%;
+  width: 60%;
+  margin-left: 25%;
 }
 
 .navBarSection {
@@ -430,16 +443,16 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -462,13 +475,14 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   border: 0.05rem solid var(--Color_AuxMain);
   justify-content: center;
   align-items: center;
-  margin-top: 8%;
+  margin-top: 20%;
   height: 60%;
+  width: 80%;
 }
 
 .mainContainer .packSection .packSection3 .packSection3Btn h4 {
-  font-size: 1rem;
-  margin-top: -15%;
+  font-size: 1.4rem;
+  margin-top: -5%;
   background-color: var(--Color_60);
   color: var(--Color_AuxMain);
   width: 80%;
@@ -479,8 +493,9 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   background-color: var(--Color_60);
   color: var(--Color_AuxSec);
   width: 110%;
+  padding-top: 2%;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   letter-spacing: 0.2rem;
   padding-bottom: 5%;
 }
@@ -848,17 +863,6 @@ footer .navBarSection {
     margin-left: auto;
     margin-right: auto;
   }
-  .landingSection {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url("../img/espaciobkg4.svg");
-  }
-  .landingSection .landingRow {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
   .landingSection .landingRow .textSection {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -876,7 +880,6 @@ footer .navBarSection {
     justify-content: center;
     align-items: center;
     z-index: 888;
-    height: 80vh;
   }
   .landingSection .landingRow .textSection h2 {
     color: var(--Color_30);
@@ -889,29 +892,6 @@ footer .navBarSection {
     font-size: 2rem;
     text-shadow: 2px 1px 3px var(--Color_AuxSec);
     letter-spacing: 0.5rem;
-  }
-  .landingSection .landingRow .logoContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    z-index: 1;
-    margin-top: -40%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
   }
   .landingSection .landingRow .logoContainer .logo {
     width: 50%;
@@ -1206,17 +1186,18 @@ footer .navBarSection {
     justify-content: center;
     align-items: center;
     margin-top: 8%;
-    height: 60%;
+    width: 28%;
   }
   .mainContainer .packSection .packSection3 .packSection3Btn h4 {
     font-size: 1rem;
-    margin-top: -15%;
+    margin-top: -5%;
     background-color: var(--Color_60);
     color: var(--Color_AuxMain);
     width: 80%;
     text-align: center;
   }
   .mainContainer .packSection .packSection3 .packSection3Btn h3 {
+    padding-top: 0%;
     background-color: var(--Color_60);
     color: var(--Color_AuxSec);
     width: 110%;
@@ -1545,6 +1526,11 @@ footer .navBarSection {
 }
 
 @media all and (min-width: 768px) {
+  .landingSection {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .landingSection .landingRow .textSection h2 {
     font-size: 1.5rem;
     letter-spacing: 0.6rem;
@@ -1554,10 +1540,16 @@ footer .navBarSection {
     letter-spacing: 0.7rem;
   }
   .landingSection .landingRow .logoContainer {
-    margin-top: -30%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .landingSection .landingRow .logoContainer .logo {
-    width: 35%;
+    margin-left: 0%;
+    width: 100%;
   }
   .navBarSection .nav {
     font-size: 1rem;
@@ -1633,13 +1625,21 @@ footer .navBarSection {
   .mainContainer .espacioDigitalSection .img {
     width: 10%;
   }
+  .mainContainer .packSection {
+    padding: 0%;
+    display: block;
+  }
   .mainContainer .packSection .packSection1 {
     padding: 0%;
   }
+  .mainContainer .packSection .packSection1 .container {
+    padding: 5%;
+  }
   .mainContainer .packSection .packSection1 .container p {
-    padding-top: 8%;
+    padding: 3%;
     padding-bottom: 10%;
-    font-size: small;
+    font-size: medium;
+    width: 120%;
   }
   .mainContainer .packSection .packSection2 {
     padding: 2%;
@@ -1656,16 +1656,40 @@ footer .navBarSection {
   .mainContainer .packSection .packSection2 .packSection2Top {
     padding-bottom: 2%;
   }
+  .mainContainer .packSection .packSection2 .packSection2Top .packSection2A {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
   .mainContainer .packSection .packSection2 .packSection2Top .packSection2A h3 {
-    font-size: xx-large;
+    font-size: 5rem;
     text-align: center;
-    letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 10px var(--Color_AuxSec);
+    letter-spacing: 0.3rem;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .mainContainer .packSection .packSection2 .packSection2Top .packSection2A p {
+    margin-top: 1%;
+    padding: 1%;
     width: 100%;
     text-align: justify;
-    padding-right: 5%;
     color: var(--Color_AuxSec);
     font-size: large;
   }
@@ -1689,16 +1713,13 @@ footer .navBarSection {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-top: 10%;
-    padding-right: 5%;
   }
   .mainContainer .packSection .packSection2 .packSection2Top .packSection2B .img {
-    width: 100%;
-    scale: 1.4;
+    width: 90%;
   }
   .mainContainer .packSection .packSection2 .packSection2C {
     width: 110%;
-    font-size: small;
+    font-size: medium;
     text-align: center;
     letter-spacing: 0.3rem;
     color: #fff;
@@ -1710,6 +1731,29 @@ footer .navBarSection {
     font-weight: bolder;
     opacity: 0.8;
     text-shadow: 0px 0px 0px #93a9ac;
+  }
+  .mainContainer .packSection .packSection3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    align-items: center;
+  }
+  .mainContainer .packSection .packSection3 .packSection3Btn {
+    width: 100%;
+    height: 25%;
   }
   .mainContainer .packSection .packSection3 .packSection3Btn h4 {
     font-size: large;

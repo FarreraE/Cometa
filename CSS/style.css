@@ -39,31 +39,31 @@
 
 @-webkit-keyframes gravity {
   0% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
   }
   50% {
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
   }
   100% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
   }
 }
 
 @keyframes gravity {
   0% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
   }
   50% {
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
   }
   100% {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
   }
 }
 
@@ -187,7 +187,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .landingSection .landingRow .logoContainer .logo {
-  width: 60%;
+  width: 50%;
   margin-left: 25%;
 }
 
@@ -673,9 +673,9 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 
 .mainContainer .section_3X3AboutUs h4 {
   margin-top: 10%;
-  font-size: medium;
+  font-size: small;
   text-align: center;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.01rem;
   opacity: 0.5;
 }
 
@@ -772,7 +772,6 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .formSection .formSectionA .formTrigger:hover {
-  scale: 1.1;
   border: 0.05rem solid var(--Color_30);
   text-shadow: 1px 1px 2px var(--Color_AuxSec);
   color: var(--Color_30);
@@ -840,6 +839,11 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
           justify-content: space-between;
 }
 
+.mainContainer .formSection .formSectionB .formImg .imgF {
+  -webkit-animation: gravity 5s linear infinite;
+          animation: gravity 5s linear infinite;
+}
+
 .mainContainer .formSection .formSectionB .formImg .img {
   width: 40%;
 }
@@ -864,8 +868,8 @@ footer .nav-link {
 }
 
 footer .nav-link:hover {
-  color: #487bb7;
-  font-size: large;
+  color: var(--Color_White);
+  opacity: 1;
 }
 
 footer .smContainer {

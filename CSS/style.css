@@ -123,6 +123,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   padding: 5%;
   height: 30%;
   background-color: #cc1c4a;
+  z-index: 999;
 }
 
 .landingSection .landingRow .logoSection .logo {

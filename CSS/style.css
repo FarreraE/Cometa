@@ -39,31 +39,31 @@
 
 @-webkit-keyframes gravity {
   0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
   }
   50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   100% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
   }
 }
 
 @keyframes gravity {
   0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
   }
   50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   100% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
   }
 }
 
@@ -248,10 +248,15 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .definitionSection {
-  margin-top: 20%;
+  margin-top: 50%;
   color: var(--Color_AuxSec);
   text-align: center;
-  font-size: 0.6rem;
+}
+
+.mainContainer .definitionSection p {
+  font-size: small;
+  opacity: 0.5;
+  margin-top: 3%;
 }
 
 .mainContainer .definitionSection .img {
@@ -264,7 +269,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .espacioDigitalSection {
-  margin-top: 20%;
+  margin-top: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,7 +320,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .packSection {
-  margin-top: 20%;
+  margin-top: 50%;
   background-color: var(--Color_60);
   color: var(--Color_White);
   border-radius: 1rem;
@@ -516,9 +521,9 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
       -ms-flex-pack: center;
           justify-content: center;
   border: 0.05rem solid var(--Color_AuxMain);
+  margin-top: 50%;
   justify-content: center;
   align-items: center;
-  margin-top: 20%;
   height: 60%;
   width: 60%;
 }
@@ -546,7 +551,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 .mainContainer .clientSection {
   padding: 0%;
   margin: 0%;
-  margin-top: 20%;
+  margin-top: 50%;
   padding: 5%;
   padding-left: 10%;
   padding-right: 10%;
@@ -619,7 +624,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .section_3X3AboutUs {
-  margin-top: 20%;
+  margin-top: 50%;
   border-radius: 1rem;
   background-color: var(--Color_60);
   display: -webkit-box;
@@ -668,9 +673,9 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 
 .mainContainer .section_3X3AboutUs h4 {
   margin-top: 10%;
-  font-size: x-small;
+  font-size: medium;
   text-align: center;
-  letter-spacing: 0rem;
+  letter-spacing: 0.05rem;
   opacity: 0.5;
 }
 
@@ -709,8 +714,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .formSection {
-  margin-top: 20%;
-  margin-bottom: 5%;
+  margin-top: 50%;
   background-color: transparent;
   padding: 5%;
   color: var(--Color_AuxMain);
@@ -844,6 +848,7 @@ footer {
   background-color: var(--Color_60);
   border-radius: 2em;
   color: var(--Color_AuxSec);
+  margin-top: 30%;
 }
 
 footer .logo {
@@ -999,7 +1004,7 @@ footer .navBarSection {
     opacity: 1;
   }
   .mainContainer .espacioDigitalSection {
-    margin-top: 20%;
+    margin-top: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -27,6 +27,7 @@
     }
 }
 
+
 @keyframes gravity {
     0% { transform: translateY(5%); }
     50% { transform: translateY(-5%); }
@@ -105,10 +106,10 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         height: inherit;
         justify-content: end;
         .logoSection{
+            padding: 5%;
             height: 30%;        
             .logo{
-                width: 40%;
-                padding: 8%;
+                width: 40% !important;
             }
         }
         .textSection {            
@@ -138,9 +139,9 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
             justify-content: center;
             align-items: flex-start;
             z-index: 1;
-            animation:gravity 8s linear infinite;
+            animation:gravity 9s linear infinite;
             .logo {
-                width: 50%;
+                width: 55%;
                 margin-left: 25%;
             }
         }
@@ -209,7 +210,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         
         .img {
             width: 100%;
-            opacity: 0.3;
+            opacity: 0.6;
         }
         .img:hover {
             opacity: 1;
@@ -770,7 +771,7 @@ footer {
             scale: 1;
             .img {
                 width: 100%;
-                opacity: 0.3;
+                opacity: 0.8;
             }
             .img:hover {
                 opacity: 1;

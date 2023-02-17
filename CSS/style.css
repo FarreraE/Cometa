@@ -120,12 +120,12 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .landingSection .landingRow .logoSection {
+  padding: 5%;
   height: 30%;
 }
 
 .landingSection .landingRow .logoSection .logo {
-  width: 40%;
-  padding: 8%;
+  width: 40% !important;
 }
 
 .landingSection .landingRow .textSection {
@@ -182,12 +182,12 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
       -ms-flex-align: start;
           align-items: flex-start;
   z-index: 1;
-  -webkit-animation: gravity 8s linear infinite;
-          animation: gravity 8s linear infinite;
+  -webkit-animation: gravity 9s linear infinite;
+          animation: gravity 9s linear infinite;
 }
 
 .landingSection .landingRow .logoContainer .logo {
-  width: 50%;
+  width: 55%;
   margin-left: 25%;
 }
 
@@ -261,7 +261,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 
 .mainContainer .definitionSection .img {
   width: 100%;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 .mainContainer .definitionSection .img:hover {
@@ -1002,7 +1002,7 @@ footer .navBarSection {
   }
   .mainContainer .definitionSection .img {
     width: 100%;
-    opacity: 0.3;
+    opacity: 0.8;
   }
   .mainContainer .definitionSection .img:hover {
     opacity: 1;

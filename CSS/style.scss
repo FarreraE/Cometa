@@ -27,12 +27,17 @@
     }
 }
 
-
 @keyframes gravity {
-    0% { transform: translateY(5%); }
-    50% { transform: translateY(-5%); }
-    100% { transform: translateY(5%); }
-  }
+    0% {
+        transform: translateY(5%);
+    }
+    50% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
+}
 
 @mixin backgroundFeature {
     background-repeat: no-repeat;
@@ -41,7 +46,7 @@
 }
 
 @mixin marginTop {
-  margin-top: 50%;
+    margin-top: 50%;
 }
 
 @mixin flex-row {
@@ -85,19 +90,14 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 //---- BODY
 
 .body {
-    overflow: auto;
     background-color: var(--Color_60);
-    //padding: 1%;
-    //width: 100%;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden;
 }
 
 //---- LANDING SECTION
 .landingSection {
     height: 100vh;
-    //width: 100vw;
     @include backgroundFeature;
     background-image: url("../img/espaciobkg4.svg");
     @include flex-row();
@@ -105,21 +105,20 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
     .landingRow {
         height: inherit;
         justify-content: end;
-        .logoSection{
+        .logoSection {
             padding: 5%;
-            height: 30%; 
-            z-index: 999;     
-            .logo{
-                width: 40% !important;
+            height: 30%;
+            z-index: 999;
+            .logo {
+                width: 40%;
             }
         }
-        .textSection {            
+        .textSection {
             height: 30%;
             @include flex-column();
             justify-content: center;
             align-items: center;
             z-index: 888;
-            //height: 80vh;
             h2 {
                 color: var(--Color_30);
                 font-size: 1rem;
@@ -135,12 +134,12 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
             }
         }
         .logoContainer {
-            height: 40%;            
+            height: 40%;
             @include flex-row();
             justify-content: center;
             align-items: flex-start;
             z-index: 1;
-            animation:gravity 9s linear infinite;
+            animation: gravity 9s linear infinite;
             .logo {
                 width: 55%;
                 margin-left: 25%;
@@ -150,13 +149,12 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 //---- NAV BAR SECTION
 .navBarSection {
-    background-color: greenyellow;
+    background-color: var(--Color_60);
+    @include flex-row();
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: var(--Color_60);
     padding: 2%;
-    //background-color: greenyellow;
     .nav {
         border-bottom: none;
         font-size: 0.9rem;
@@ -183,9 +181,8 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
             }
         }
     }
-
     .logo {
-        max-width: 0%;
+        display: none;
     }
 }
 //---- MAIN CONTAINER
@@ -200,15 +197,14 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
     padding-top: 5%;
     .definitionSection {
         @include marginTop();
-        // background-color: red;
         color: var(--Color_AuxSec);
         text-align: center;
-        p{
+        p {
             font-size: small;
             opacity: 0.5;
             margin-top: 3%;
         }
-        
+
         .img {
             width: 100%;
             opacity: 0.6;
@@ -220,11 +216,10 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 
     //---- ESPACIO DIGITAL SECTION
     .espacioDigitalSection {
-        //background-color: pink;
         @include marginTop();
         @include flex-row();
         @include backgroundFeature;
-        background-image: url("../img/espaciobkg3.svg");
+        background-image: url("../img/backgroundGalleryLanding.svg");
         padding-top: 10%;
         padding-bottom: 5%;
         .text {
@@ -236,30 +231,41 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
                 letter-spacing: 0.5rem;
                 text-shadow: 1px 1px 4px var(--Color_AuxSec);
             }
-            p {
-                color: var(--Color_30);
+            .formTrigger {
+                color: var(--Color_White);
                 margin-top: 2%;
                 font-size: 1rem;
                 letter-spacing: 0.2rem;
+                background-color: transparent;
+                @include borderFeature();
+                border-radius: 0.5rem;
+                padding: 1%;
+                padding-left: 2%;
+                padding-right: 2%;
             }
-            p:hover {
+            .formTrigger:hover {
                 text-shadow: 1px 1px 2px var(--Color_AuxSec);
+                border: 0.05rem solid var(--Color_30);
+                color: var(--Color_30);
             }
         }
         .img {
-            animation:gravity 15s linear infinite;
-            width: 0%;
+            animation: gravity 16s linear infinite;
+            display: none;
+        }
+        .imgB {
+            animation: gravity 2s linear alternate;
         }
     }
 
-    //---- packSection
+    //---- PACK SECTION
     .packSection {
         @include marginTop();
         background-color: var(--Color_60);
         color: var(--Color_White);
         border-radius: 1rem;
         width: 90%;
-        //background-color: brown;
+        margin-top: 20%;
         .row {
             justify-content: space-around;
         }
@@ -324,7 +330,6 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
                     border-radius: 0.5rem;
                 }
                 .formTrigger:hover {
-                    scale: 1.1;
                     border: 0.05rem solid var(--Color_30);
                     text-shadow: 1px 1px 2px var(--Color_AuxSec);
                     color: var(--Color_30);
@@ -349,36 +354,37 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 
             .packSection2Top {
                 padding-bottom: 2%;
-                
                 .packSection2A {
                     h3 {
-                        font-size: 5rem;
+                        font-size: 4rem;
                         letter-spacing: 0.5rem;
                         text-shadow: 1px 1px 10px var(--Color_AuxSec);
+                        text-align: center;
                     }
                     p {
+                        margin-top: 2%;
                         width: 95%;
                         text-align: justify;
-                        padding-right: 5%;
+                        padding-right: 0%;
                         color: var(--Color_AuxSec);
-                        font-size: 1.4rem;
-                    }
-                }
-                .packSection2B {
-                    @include reset-MarginPadding();
-                    text-align: center;
-                    animation:spin 20s linear infinite;
-                    .img {
-                        width: 50%;
+                        font-size: large;
                     }
                 }
             }
-            .packSection2C {
-                font-size: smaller;
+            .packSection2B {
+                @include reset-MarginPadding();
                 text-align: center;
-                letter-spacing: 0.3rem;
+                .img {
+                    width: 50%;
+                }
+            }
+            .packSection2C {
+                font-size: large;
+                text-align: center;
+                letter-spacing: 0.1rem;
                 color: var(--Color_White);
                 text-shadow: 1px 1px 2px var(--Color_AuxSec);
+                margin-top: 2%;
                 .white {
                     color: var(--Color_30);
                     font-weight: bolder;
@@ -389,18 +395,16 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         }
         //---- Pack Section 3
         .packSection3 {
-          padding: 1%;
+            padding: 1%;
             display: none !important;
             .packSection3Btn {
                 @include flex-column();
                 @include borderFeature();
                 @include marginTop();
-                justify-content: center;
-                align-items: center;
-                height: 60%;
-                width: 60%;
+                margin-top: 8%;
+                width: 28%;
                 h4 {
-                    font-size: 1.4rem;
+                    font-size: medium;
                     margin-top: -5%;
                     background-color: var(--Color_60);
                     color: var(--Color_AuxMain);
@@ -418,6 +422,16 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
                     padding-bottom: 5%;
                 }
             }
+            .packSection3Btn:hover {
+                border: 0.05rem solid var(--Color_30);
+                h4 {
+                    color: var(--Color_30);
+                }
+                h3 {
+                    text-shadow: 1px 1px 2px var(--Color_AuxSec);
+                    color: var(--Color_30);
+                }
+            }
         }
     }
     //---- clientSection
@@ -432,7 +446,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         @include backgroundFeature();
         background-image: url("../img/espaciobkg.svg");
         color: var(--Color_White);
-        //background-color: blue;
+
         h3 {
             text-align: center;
             font-size: 1.5rem;
@@ -483,25 +497,20 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
         border-radius: 1rem;
         background-color: var(--Color_60);
         @include flex-column();
-        // background-color: purple;
         .imgClassB {
             width: 100%;
-            opacity: 0.6;
-            scale: 1;
+            opacity: 0.6;            
             margin-left: -5%;
         }
         .imgClassB:hover {
             opacity: 1;
-            scale: 1;
         }
         .imgClass {
-            scale: 1;
             width: 100%;
             opacity: 0.8;
         }
         .imgClass:hover {
             opacity: 1;
-            scale: 1;
         }
 
         .container3x3 {
@@ -588,10 +597,8 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
                 background-color: rgba(255, 255, 255, 0.07);
                 color: var(--Color_White);
                 border-radius: 0.5rem;
-                
             }
             .formTrigger:hover {
-                
                 border: 0.05rem solid var(--Color_30);
                 text-shadow: 1px 1px 2px var(--Color_AuxSec);
                 color: var(--Color_30);
@@ -626,8 +633,8 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
             .formImg {
                 @include flex-row();
                 justify-content: space-between;
-                .imgF{
-                    animation:gravity 5s linear infinite;
+                .imgF {
+                    animation: gravity 5s linear infinite;
                 }
                 .img {
                     width: 40%;
@@ -642,7 +649,7 @@ footer {
     background-color: var(--Color_60);
     border-radius: 2em;
     color: var(--Color_AuxSec);
-   margin-top: 30%;
+    margin-top: 30%;
 
     .logo {
         padding: 5%;
@@ -678,573 +685,62 @@ footer {
 }
 
 @media all and (min-width: 576px) {
-    //---- BODY
-
-    .body {
-        overflow: auto;
-        background-color: var(--Color_60);
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     //---- LANDING SECTION
-    .landingSection {
-        .landingRow {
-            .textSection {
-                @include flex-column();
-                justify-content: center;
-                align-items: center;
-                z-index: 888;
-                h2 {
-                    color: var(--Color_30);
-                    font-size: 1rem;
-                    letter-spacing: 0.5rem;
-                }
-
-                h1 {
-                    text-align: center;
-                    color: var(--Color_White);
-                    font-size: 2rem;
-                    text-shadow: 2px 1px 3px var(--Color_AuxSec);
-                    letter-spacing: 0.5rem;
-                }
-            }
-            .logoContainer {
-                .logo {
-                    width: 50%;
-                }
-            }
-        }
-    }
     //---- NAV BAR SECTION
     .navBarSection {
-        background-color: greenyellow;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        background-color: var(--Color_60);
-        padding: 2%;
-        //background-color: greenyellow;
-        .nav {
-            border-bottom: none;
-            font-size: 0.9rem;
-            .nav-item {
-                text-align: center;
-                width: 24%;
-                .nav-link {
-                    opacity: 0.5;
-                    font-weight: lighter;
-                    color: var(--Color_White);
-                }
-                .nav-link:hover {
-                    opacity: 1;
-                    border: none;
-                    font-weight: bold;
-                }
-
-                .active {
-                    color: var(--Color_30);
-                    background-color: transparent;
-                    border: none;
-                    font-weight: bold;
-                    opacity: 1;
-                }
-            }
-        }
-
+        justify-content: space-between;
         .logo {
-            max-width: 6%;
+            display: block;
+            max-width: 10%;
         }
     }
     //---- MAIN CONTAINER
 
     .mainContainer {
-        background-color: var(--Color_60);
-        border-radius: 2em;
-        @include reset-MarginPadding;
-        @include backgroundFeature;
         //---- DEFINITION SECTION
-        .definitionSection {
-            // background-color: red;
-            color: var(--Color_AuxSec);
-            text-align: center;
-            padding-top: 20%;
-            scale: 1;
-            .img {
-                width: 100%;
-                opacity: 0.8;
-            }
-            .img:hover {
-                opacity: 1;
-            }
-        }
-
         //---- ESPACIO DIGITAL SECTION
-        .espacioDigitalSection {
-            @include marginTop();
-            @include flex-row();
-            @include backgroundFeature;
-            background-image: url("../img/espaciobkg3.svg");
-            padding-top: 10%;
-            padding-bottom: 5%;
-            .text {
-                color: #fff;
-                text-align: center;
-
-                h3 {
-                    font-size: 1.5rem;
-                    letter-spacing: 0.5rem;
-                    text-shadow: 1px 1px 4px var(--Color_AuxSec);
-                }
-                p {
-                    color: var(--Color_30);
-                    margin-top: 2%;
-                    font-size: 1rem;
-                    letter-spacing: 0.2rem;
-                }
-                p:hover {
-                    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-                }
-            }
-            .img {
-                width: 0%;
-            }
-        }
-
-        //---- packSection
+        //---- PACK SECTION
         .packSection {
-            margin-top: 20%;
-            background-color: var(--Color_60);
-            color: var(--Color_White);
-            border-radius: 1rem;
-            width: 90%;
-            //background-color: brown;
-            .row {
-                justify-content: space-around;
-            }
-            .spacer {
-                height: 10px;
-                width: 90%;
-                background-color: var(--Color_60);
-                color: var(--Color_60);
-            }
             //---- Pack Section 1
-            .packSection1 {
-                padding: 3%;
-                @include flex-column();
-
-                strong {
-                    color: var(--Color_White);
-                }
-                .container {
-                    padding: 2%;
-                    @include borderFeature();
-                    @include flex-column();
-                    .spacer {
-                        margin-top: -6%;
-                        height: 20%;
-                        text-align: center;
-                        background-color: var(--Color_60);
-                        color: var(--Color_60);
-                    }
-
-                    p {
-                        @include reset-MarginPadding();
-                        width: 110%;
-
-                        padding-top: 10%;
-                        padding-bottom: 10%;
-
-                        font-size: 1.2rem;
-                        text-align: justify;
-                        letter-spacing: 0.1rem;
-                        color: var(--Color_AuxMain);
-                        background-color: var(--Color_60);
-                    }
-                }
-
-                .btnContainer {
-                    @include flex-row();
-                    width: 70%;
-                    background-color: var(--Color_60);
-                    margin-top: -1%;
-                    border: none;
-                    .formTrigger {
-                        color: var(--Color_White);
-                        background-color: var(--Color_60);
-
-                        font-size: 1.5rem;
-                        letter-spacing: 0.2rem;
-                        padding: 1%;
-                        margin-top: -8%;
-                        width: 80%;
-
-                        @include borderFeature();
-                        border-radius: 0.5rem;
-                    }
-                    .formTrigger:hover {
-                        scale: 1.1;
-                        border: 0.05rem solid var(--Color_30);
-                        text-shadow: 1px 1px 2px var(--Color_AuxSec);
-                        color: var(--Color_30);
-                    }
-                }
-            }
             //---- Pack Section 2
-            .packSection2 {
-                @include reset-MarginPadding();
-                @include borderFeature();
-                padding-left: 2%;
-                padding-right: 2%;
-
-                .sTop {
-                    margin-top: -1%;
-                    margin-bottom: 2%;
-                }
-                .sbottom {
-                    height: 10%;
-                    margin-top: 1%;
-                }
-
-                .packSection2Top {
-                    padding-bottom: 2%;
-                    .packSection2A {
-                        h3 {
-                            font-size: 5rem;
-                            letter-spacing: 0.5rem;
-                            text-shadow: 1px 1px 10px var(--Color_AuxSec);
-                        }
-                        p {
-                            width: 95%;
-                            text-align: justify;
-                            padding-right: 5%;
-                            color: var(--Color_AuxSec);
-                            font-size: 1.4rem;
-                        }
-                    }
-                }
-                .packSection2C {
-                    font-size: 1.6rem;
-                    text-align: center;
-                    letter-spacing: 0.3rem;
-                    color: var(--Color_White);
-                    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-                    .white {
-                        color: var(--Color_30);
-                        font-weight: bolder;
-                        opacity: 0.8;
-                        text-shadow: 0px 0px 0px var(--Color_AuxSec);
-                    }
-                }
-            }
             //---- Pack Section 3
             .packSection3 {
-               padding: 1%;
-               display: flex !important;
+                display: flex !important;
                 @include flex-row();
                 justify-content: space-between;
-                .packSection3Btn {
-                    @include flex-column();
-                    @include borderFeature();
-                    justify-content: center;
-                    align-items: center;
-                    margin-top: 8%;
-                    width: 28%;
-                    h4 {
-                        font-size: 1rem;
-                        margin-top: -5%;
-                        background-color: var(--Color_60);
-                        color: var(--Color_AuxMain);
-                        width: 80%;
-                        text-align: center;
-                    }
-                    h3 {
-                        padding-top: 0%;
-                        background-color: var(--Color_60);
-                        color: var(--Color_AuxSec);
-                        width: 110%;
-                        text-align: center;
-                        font-size: 1.6rem;
-                        letter-spacing: 0.2rem;
-                        padding-bottom: 5%;
-                    }
-                }
             }
         }
-        //---- clientSection
-        .clientSection {
-            @include reset-MarginPadding;
-            margin-top: 20%;
-            padding: 5%;
-            padding-left: 10%;
-            padding-right: 10%;
-            color: var(--Color_White);
-            border: none;
-            @include backgroundFeature();
-            color: var(--Color_White);
-            //background-color: blue;
-            h3 {
-                text-align: center;
-                font-size: 1.5rem;
-                letter-spacing: 0.2rem;
-                margin-bottom: 2%;
-                text-shadow: 1px 1px 2px var(--Color_AuxSec);
-            }
-            .clientSectionItem {
-                width: 75%;
-                background-color: rgba(255, 255, 255, 0.03);
-                border: 0.1rem solid var(--Color_AuxMain);
-                border-radius: 1rem;
-                padding: 5%;
-                .section {
-                    @include flex-column();
-                    justify-content: center;
-                    align-items: center;
-                    border: none;
-
-                    h3 {
-                        color: var(--Color_White);
-                        font-size: 2rem;
-                        letter-spacing: 0.2rem;
-                    }
-                }
-            }
-
-            .formTrigger {
-                font-size: 1.2rem;
-                padding: 0.5%;
-                margin-top: 5%;
-                width: 40%;
-                background-color: #0b162f;
-                border: 0.05rem solid #487bb7;
-                border-radius: 0.5rem;
-                color: #fff;
-            }
-            .formTrigger:hover {
-                scale: 1.1;
-                border: 0.05rem solid #facd34;
-                text-shadow: 1px 1px 2px #93a9ac;
-                color: #facd34;
-            }
-        }
+        //---- CLIENT SECTION
         //---- ABOUT US SECTION
-        .section_3X3AboutUs {
-            margin-top: 20%;
-            border-radius: 1rem;
-            background-color: var(--Color_60);
-            @include flex-column();
-            // background-color: purple;
-            .imgClassB {
-                width: 100%;
-                opacity: 0.6;
-                scale: 1;
-                margin-left: -5%;
-            }
-            .imgClassB:hover {
-                opacity: 1;
-                scale: 1;
-            }
-            .imgClass {
-                scale: 1;
-                width: 100%;
-                opacity: 0.8;
-            }
-            .imgClass:hover {
-                opacity: 1;
-                scale: 1;
-            }
-
-            .container3x3 {
-                color: var(--Color_White);
-                border-radius: 1rem;
-                padding-top: 2%;
-            }
-
-            h4 {
-                margin-top: 10%;
-                font-size: x-small;
-                text-align: center;
-                letter-spacing: 0rem;
-                opacity: 0.5;
-            }
-            .section_3X3_1 {
-                margin-left: 0%;
-                @include borderFeature();
-                background-color: var(--Color_60);
-                margin-right: 5%;
-                padding-bottom: 1%;
-                h4 {
-                    padding-right: 0%;
-                }
-            }
-
-            .section_3X3_2 {
-                transform: scale(1.1);
-                @include borderFeature();
-                background-color: var(--Color_60);
-                margin-bottom: 10%;
-                h4 {
-                    margin-top: 3%;
-                }
-            }
-
-            .section_3X3_3 {
-                @include borderFeature();
-                background-color: var(--Color_60);
-                margin-left: 5%;
-
-                h4 {
-                    padding-left: 0%;
-                }
-            }
-        }
-
         //FORM SECTION
-        .formSection {
-            margin-top: 20%;
-            margin-bottom: 5%;
-            background-color: transparent;
-            padding: 5%;
-            color: var(--Color_AuxMain);
-            font-size: 1.2rem;
-            // background-color: #f8bc04;
-            .formSectionA {
-                padding: 5%;
-                background-color: var(--Color_60);
-                border-radius: 1rem;
-                @include borderFeature();
-                @include flex-column();
-
-                align-items: stretch;
-                justify-content: center;
-                .form-control {
-                    @include borderFeature();
-                    background-color: rgba(255, 255, 255, 0.07);
-                    color: var(--Color_White);
-                }
-                select {
-                    @include borderFeature();
-                    background-color: rgba(255, 255, 255, 0.07);
-                    color: var(--Color_White);
-                    margin-top: 8%;
-                    margin-bottom: 5%;
-                }
-                .formTrigger {
-                    font-size: medium;
-                    width: 100%;
-                    padding-top: 2%;
-                    padding-bottom: 2%;
-                    margin-top: 5%;
-                    @include borderFeature();
-                    background-color: rgba(255, 255, 255, 0.07);
-                    color: var(--Color_White);
-                    border-radius: 0.5rem;
-                }
-                .formTrigger:hover {
-                    scale: 1.1;
-                    border: 0.05rem solid var(--Color_30);
-                    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-                    color: var(--Color_30);
-                }
-                .checkGroup {
-                    padding: 2%;
-                    margin: 0%;
-                    font-size: small;
-                    label {
-                        margin-left: 2%;
-                    }
-                }
-            }
-            .formSectionB {
-                margin-top: 10%;
-                @include flex-column();
-                padding: 5%;
-                padding-top: 1%;
-                color: var(--Color_AuxMain);
-                h2 {
-                    color: var(--Color_White);
-                    font-size: 3rem;
-                    font-weight: 600;
-                    padding: 5%;
-                    text-align: left;
-                    width: 100%;
-                }
-                h3 {
-                    color: var(--Color_White);
-                }
-
-                .formImg {
-                    @include flex-row();
-                    justify-content: space-between;
-                    .img {
-                        width: 40%;
-                    }
-                }
-            }
-        }
     }
-
     //---- FOOTER
-    footer {
-        background-color: var(--Color_60);
-        border-radius: 2em;
-        color: var(--Color_AuxSec);
-        //background-color: red;
-
-        .logo {
-            padding: 5%;
-            opacity: 0.8;
-            width: 100%;
-        }
-
-        .nav-link {
-            color: var(--Color_White);
-            font-size: small;
-            opacity: 0.5;
-        }
-
-        .nav-link:hover {
-            color: #487bb7;
-            font-size: large;
-        }
-
-        .smContainer {
-            width: 70%;
-            padding-top: 0%;
-            margin: 1%;
-            opacity: 0.5;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navBarSection {
-            @include flex-row();
-            padding-top: 0%;
-            align-items: flex-end;
-            justify-content: end;
-        }
-    }
 }
 
 @media all and (min-width: 768px) {
     //---- LANDING SECTION
     .landingSection {
-        align-items: center;
         .landingRow {
+            justify-content: start;
+            .logoSection {
+                height: 20%;
+                .logo {
+                    width: 15%;
+                }
+            }
             .textSection {
-                margin-top: 0%;
+                height: 40%;
                 h2 {
                     font-size: 1.5rem;
                     letter-spacing: 0.6rem;
                 }
-
                 h1 {
                     font-size: 2.5rem;
                     letter-spacing: 0.7rem;
                 }
             }
             .logoContainer {
-                justify-content: center;
-                align-items: center;
+                height: 60%;
                 .logo {
                     margin-left: 0%;
                     width: 100%;
@@ -1271,8 +767,6 @@ footer {
         //---- DEFINITION SECTION NOT REQUIRED
         //---- ESPACIO DIGITAL SECTION
         .espacioDigitalSection {
-            padding-top: 10%;
-            padding-bottom: 5%;
             .text {
                 h3 {
                     font-size: 1.4rem;
@@ -1283,11 +777,8 @@ footer {
                     letter-spacing: 0.4rem;
                 }
             }
-            .img {
-                width: 10%;
-            }
         }
-        //---- packSection
+        //---- PACK SECTION
         .packSection {
             //---- Pack Section 1
             .packSection1 {
@@ -1299,63 +790,7 @@ footer {
                     }
                 }
             }
-            .packSection2 {
-                @include reset-MarginPadding();
-                @include borderFeature();
-                padding-left: 2%;
-                padding-right: 2%;
-    
-                .sTop {
-                    margin-top: -1%;
-                    margin-bottom: 2%;
-                }
-                .sbottom {
-                    height: 10%;
-                    margin-top: 1%;
-                }
-    
-                .packSection2Top {
-                    padding-bottom: 2%;
-                    .packSection2A {
-                        h3 {
-                            font-size: 4rem;
-                            letter-spacing: 0.5rem;
-                            text-shadow: 1px 1px 10px var(--Color_AuxSec);
-                            text-align: center;
-                            
-                        }
-                        p {
-                            margin-top: 2%;
-                            width: 95%;
-                            text-align: justify;
-                            padding-right: 0%;
-                            color: var(--Color_AuxSec);
-                            font-size: large;
-                        }
-                    }
-                }
-                .packSection2B {
-                    @include reset-MarginPadding();
-                    text-align: center;
-                    .img {
-                        width: 50%;
-                    }
-                }
-                .packSection2C {
-                    font-size: large;
-                    text-align: center;
-                    letter-spacing: 0.1rem;
-                    color: var(--Color_White);
-                    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-                    margin-top: 2%;
-                    .white {
-                        color: var(--Color_30);
-                        font-weight: bolder;
-                        opacity: 0.8;
-                        text-shadow: 0px 0px 0px var(--Color_AuxSec);
-                    }
-                }
-            }
+            //---- Pack Section 2
             //---- Pack Section 3
             .packSection3 {
                 .packSection3Btn {
@@ -1369,16 +804,12 @@ footer {
             }
         }
 
-        // CLIENT SECTION MISSING
-        //HERE
+        // CLIENT SECTION 
         //---- ABOUT US SECTION
         .section_3X3AboutUs {
             .imgClassB {
                 margin-left: 0%;
                 width: 90%;
-            }
-            .imgClass {
-                scale: 1;
             }
             h4 {
                 margin-top: 5%;
@@ -1464,7 +895,7 @@ footer {
                 width: 10%;
             }
         }
-        //---- packSection
+        //---- PACK SECTION
         .packSection {
             //---- Pack Section 1
             padding: 0%;
@@ -1566,7 +997,7 @@ footer {
 
         // CLIENT SECTION MISSING
         //HERE
-        
+
         //FORM SECTION
         .formSection {
             font-size: medium;
@@ -1663,7 +1094,7 @@ footer {
                 width: 10%;
             }
         }
-        //---- packSection
+        //---- PACK SECTION
         .packSection {
             background-image: url("../img/casePackBoton.svg");
             background-repeat: no-repeat;
@@ -1859,10 +1290,6 @@ footer {
     }
 }
 @media (min-width: 1200px) {
-    .body {
-        min-width: 1200px;
-        max-width: 1800px;
-    }
     //---- LANDING SECTION
     .landingSection {
         .landingRow {
@@ -1917,7 +1344,7 @@ footer {
                 width: 10%;
             }
         }
-        //---- packSection
+        //---- PACK SECTION
         .packSection {
             background-image: url("../img/casePackBoton.svg");
             background-repeat: no-repeat;

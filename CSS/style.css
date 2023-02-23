@@ -83,11 +83,9 @@ https://www.freepik.es/search?author=1914344&authorSlug=macrovector&format=autho
 www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=futuristic%20hud&position=7&from_view=search&track=sph
 */
 .body {
-  overflow: auto;
   background-color: var(--Color_60);
   margin-left: auto;
   margin-right: auto;
-  overflow-x: hidden;
 }
 
 .landingSection {
@@ -126,7 +124,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .landingSection .landingRow .logoSection .logo {
-  width: 40% !important;
+  width: 40%;
 }
 
 .landingSection .landingRow .textSection {
@@ -193,12 +191,24 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .navBarSection {
-  background-color: greenyellow;
+  background-color: var(--Color_60);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: var(--Color_60);
   padding: 2%;
 }
 
@@ -233,7 +243,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .navBarSection .logo {
-  max-width: 0%;
+  display: none;
 }
 
 .mainContainer {
@@ -287,7 +297,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("../img/espaciobkg3.svg");
+  background-image: url("../img/backgroundGalleryLanding.svg");
   padding-top: 10%;
   padding-bottom: 5%;
 }
@@ -303,21 +313,34 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   text-shadow: 1px 1px 4px var(--Color_AuxSec);
 }
 
-.mainContainer .espacioDigitalSection .text p {
-  color: var(--Color_30);
+.mainContainer .espacioDigitalSection .text .formTrigger {
+  color: var(--Color_White);
   margin-top: 2%;
   font-size: 1rem;
   letter-spacing: 0.2rem;
+  background-color: transparent;
+  border: 0.05rem solid var(--Color_AuxMain);
+  border-radius: 0.5rem;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-.mainContainer .espacioDigitalSection .text p:hover {
+.mainContainer .espacioDigitalSection .text .formTrigger:hover {
   text-shadow: 1px 1px 2px var(--Color_AuxSec);
+  border: 0.05rem solid var(--Color_30);
+  color: var(--Color_30);
 }
 
 .mainContainer .espacioDigitalSection .img {
-  -webkit-animation: gravity 15s linear infinite;
-          animation: gravity 15s linear infinite;
-  width: 0%;
+  -webkit-animation: gravity 16s linear infinite;
+          animation: gravity 16s linear infinite;
+  display: none;
+}
+
+.mainContainer .espacioDigitalSection .imgB {
+  -webkit-animation: gravity 2s linear alternate;
+          animation: gravity 2s linear alternate;
 }
 
 .mainContainer .packSection {
@@ -326,6 +349,7 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   color: var(--Color_White);
   border-radius: 1rem;
   width: 90%;
+  margin-top: 20%;
 }
 
 .mainContainer .packSection .row {
@@ -433,7 +457,6 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .packSection .packSection1 .btnContainer .formTrigger:hover {
-  scale: 1.1;
   border: 0.05rem solid var(--Color_30);
   text-shadow: 1px 1px 2px var(--Color_AuxSec);
   color: var(--Color_30);
@@ -462,37 +485,38 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 }
 
 .mainContainer .packSection .packSection2 .packSection2Top .packSection2A h3 {
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: 0.5rem;
   text-shadow: 1px 1px 10px var(--Color_AuxSec);
+  text-align: center;
 }
 
 .mainContainer .packSection .packSection2 .packSection2Top .packSection2A p {
+  margin-top: 2%;
   width: 95%;
   text-align: justify;
-  padding-right: 5%;
+  padding-right: 0%;
   color: var(--Color_AuxSec);
-  font-size: 1.4rem;
+  font-size: large;
 }
 
-.mainContainer .packSection .packSection2 .packSection2Top .packSection2B {
+.mainContainer .packSection .packSection2 .packSection2B {
   padding: 0%;
   margin: 0%;
   text-align: center;
-  -webkit-animation: spin 20s linear infinite;
-          animation: spin 20s linear infinite;
 }
 
-.mainContainer .packSection .packSection2 .packSection2Top .packSection2B .img {
+.mainContainer .packSection .packSection2 .packSection2B .img {
   width: 50%;
 }
 
 .mainContainer .packSection .packSection2 .packSection2C {
-  font-size: smaller;
+  font-size: large;
   text-align: center;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   color: var(--Color_White);
   text-shadow: 1px 1px 2px var(--Color_AuxSec);
+  margin-top: 2%;
 }
 
 .mainContainer .packSection .packSection2 .packSection2C .white {
@@ -523,14 +547,12 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
           justify-content: center;
   border: 0.05rem solid var(--Color_AuxMain);
   margin-top: 50%;
-  justify-content: center;
-  align-items: center;
-  height: 60%;
-  width: 60%;
+  margin-top: 8%;
+  width: 28%;
 }
 
 .mainContainer .packSection .packSection3 .packSection3Btn h4 {
-  font-size: 1.4rem;
+  font-size: medium;
   margin-top: -5%;
   background-color: var(--Color_60);
   color: var(--Color_AuxMain);
@@ -547,6 +569,19 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
   font-size: 2rem;
   letter-spacing: 0.2rem;
   padding-bottom: 5%;
+}
+
+.mainContainer .packSection .packSection3 .packSection3Btn:hover {
+  border: 0.05rem solid var(--Color_30);
+}
+
+.mainContainer .packSection .packSection3 .packSection3Btn:hover h4 {
+  color: var(--Color_30);
+}
+
+.mainContainer .packSection .packSection3 .packSection3Btn:hover h3 {
+  text-shadow: 1px 1px 2px var(--Color_AuxSec);
+  color: var(--Color_30);
 }
 
 .mainContainer .clientSection {
@@ -646,24 +681,20 @@ www.freepik.com/free-vector/technology-futuristic-infographic_7090139.htm#query=
 .mainContainer .section_3X3AboutUs .imgClassB {
   width: 100%;
   opacity: 0.6;
-  scale: 1;
   margin-left: -5%;
 }
 
 .mainContainer .section_3X3AboutUs .imgClassB:hover {
   opacity: 1;
-  scale: 1;
 }
 
 .mainContainer .section_3X3AboutUs .imgClass {
-  scale: 1;
   width: 100%;
   opacity: 0.8;
 }
 
 .mainContainer .section_3X3AboutUs .imgClass:hover {
   opacity: 1;
-  scale: 1;
 }
 
 .mainContainer .section_3X3AboutUs .container3x3 {
@@ -910,300 +941,16 @@ footer .navBarSection {
 }
 
 @media all and (min-width: 576px) {
-  .body {
-    overflow: auto;
-    background-color: var(--Color_60);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .landingSection .landingRow .textSection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    justify-content: center;
-    align-items: center;
-    z-index: 888;
-  }
-  .landingSection .landingRow .textSection h2 {
-    color: var(--Color_30);
-    font-size: 1rem;
-    letter-spacing: 0.5rem;
-  }
-  .landingSection .landingRow .textSection h1 {
-    text-align: center;
-    color: var(--Color_White);
-    font-size: 2rem;
-    text-shadow: 2px 1px 3px var(--Color_AuxSec);
-    letter-spacing: 0.5rem;
-  }
-  .landingSection .landingRow .logoContainer .logo {
-    width: 50%;
-  }
   .navBarSection {
-    background-color: greenyellow;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: var(--Color_60);
-    padding: 2%;
-  }
-  .navBarSection .nav {
-    border-bottom: none;
-    font-size: 0.9rem;
-  }
-  .navBarSection .nav .nav-item {
-    text-align: center;
-    width: 24%;
-  }
-  .navBarSection .nav .nav-item .nav-link {
-    opacity: 0.5;
-    font-weight: lighter;
-    color: var(--Color_White);
-  }
-  .navBarSection .nav .nav-item .nav-link:hover {
-    opacity: 1;
-    border: none;
-    font-weight: bold;
-  }
-  .navBarSection .nav .nav-item .active {
-    color: var(--Color_30);
-    background-color: transparent;
-    border: none;
-    font-weight: bold;
-    opacity: 1;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .navBarSection .logo {
-    max-width: 6%;
-  }
-  .mainContainer {
-    background-color: var(--Color_60);
-    border-radius: 2em;
-    padding: 0%;
-    margin: 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  .mainContainer .definitionSection {
-    color: var(--Color_AuxSec);
-    text-align: center;
-    padding-top: 20%;
-    scale: 1;
-  }
-  .mainContainer .definitionSection .img {
-    width: 100%;
-    opacity: 0.8;
-  }
-  .mainContainer .definitionSection .img:hover {
-    opacity: 1;
-  }
-  .mainContainer .espacioDigitalSection {
-    margin-top: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url("../img/espaciobkg3.svg");
-    padding-top: 10%;
-    padding-bottom: 5%;
-  }
-  .mainContainer .espacioDigitalSection .text {
-    color: #fff;
-    text-align: center;
-  }
-  .mainContainer .espacioDigitalSection .text h3 {
-    font-size: 1.5rem;
-    letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 4px var(--Color_AuxSec);
-  }
-  .mainContainer .espacioDigitalSection .text p {
-    color: var(--Color_30);
-    margin-top: 2%;
-    font-size: 1rem;
-    letter-spacing: 0.2rem;
-  }
-  .mainContainer .espacioDigitalSection .text p:hover {
-    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-  }
-  .mainContainer .espacioDigitalSection .img {
-    width: 0%;
-  }
-  .mainContainer .packSection {
-    margin-top: 20%;
-    background-color: var(--Color_60);
-    color: var(--Color_White);
-    border-radius: 1rem;
-    width: 90%;
-  }
-  .mainContainer .packSection .row {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .mainContainer .packSection .spacer {
-    height: 10px;
-    width: 90%;
-    background-color: var(--Color_60);
-    color: var(--Color_60);
-  }
-  .mainContainer .packSection .packSection1 {
-    padding: 3%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .mainContainer .packSection .packSection1 strong {
-    color: var(--Color_White);
-  }
-  .mainContainer .packSection .packSection1 .container {
-    padding: 2%;
-    border: 0.05rem solid var(--Color_AuxMain);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .mainContainer .packSection .packSection1 .container .spacer {
-    margin-top: -6%;
-    height: 20%;
-    text-align: center;
-    background-color: var(--Color_60);
-    color: var(--Color_60);
-  }
-  .mainContainer .packSection .packSection1 .container p {
-    padding: 0%;
-    margin: 0%;
-    width: 110%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    font-size: 1.2rem;
-    text-align: justify;
-    letter-spacing: 0.1rem;
-    color: var(--Color_AuxMain);
-    background-color: var(--Color_60);
-  }
-  .mainContainer .packSection .packSection1 .btnContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 70%;
-    background-color: var(--Color_60);
-    margin-top: -1%;
-    border: none;
-  }
-  .mainContainer .packSection .packSection1 .btnContainer .formTrigger {
-    color: var(--Color_White);
-    background-color: var(--Color_60);
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    padding: 1%;
-    margin-top: -8%;
-    width: 80%;
-    border: 0.05rem solid var(--Color_AuxMain);
-    border-radius: 0.5rem;
-  }
-  .mainContainer .packSection .packSection1 .btnContainer .formTrigger:hover {
-    scale: 1.1;
-    border: 0.05rem solid var(--Color_30);
-    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-    color: var(--Color_30);
-  }
-  .mainContainer .packSection .packSection2 {
-    padding: 0%;
-    margin: 0%;
-    border: 0.05rem solid var(--Color_AuxMain);
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  .mainContainer .packSection .packSection2 .sTop {
-    margin-top: -1%;
-    margin-bottom: 2%;
-  }
-  .mainContainer .packSection .packSection2 .sbottom {
-    height: 10%;
-    margin-top: 1%;
-  }
-  .mainContainer .packSection .packSection2 .packSection2Top {
-    padding-bottom: 2%;
-  }
-  .mainContainer .packSection .packSection2 .packSection2Top .packSection2A h3 {
-    font-size: 5rem;
-    letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 10px var(--Color_AuxSec);
-  }
-  .mainContainer .packSection .packSection2 .packSection2Top .packSection2A p {
-    width: 95%;
-    text-align: justify;
-    padding-right: 5%;
-    color: var(--Color_AuxSec);
-    font-size: 1.4rem;
-  }
-  .mainContainer .packSection .packSection2 .packSection2C {
-    font-size: 1.6rem;
-    text-align: center;
-    letter-spacing: 0.3rem;
-    color: var(--Color_White);
-    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-  }
-  .mainContainer .packSection .packSection2 .packSection2C .white {
-    color: var(--Color_30);
-    font-weight: bolder;
-    opacity: 0.8;
-    text-shadow: 0px 0px 0px var(--Color_AuxSec);
+    display: block;
+    max-width: 10%;
   }
   .mainContainer .packSection .packSection3 {
-    padding: 1%;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -1222,370 +969,22 @@ footer .navBarSection {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .mainContainer .packSection .packSection3 .packSection3Btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border: 0.05rem solid var(--Color_AuxMain);
-    justify-content: center;
-    align-items: center;
-    margin-top: 8%;
-    width: 28%;
-  }
-  .mainContainer .packSection .packSection3 .packSection3Btn h4 {
-    font-size: 1rem;
-    margin-top: -5%;
-    background-color: var(--Color_60);
-    color: var(--Color_AuxMain);
-    width: 80%;
-    text-align: center;
-  }
-  .mainContainer .packSection .packSection3 .packSection3Btn h3 {
-    padding-top: 0%;
-    background-color: var(--Color_60);
-    color: var(--Color_AuxSec);
-    width: 110%;
-    text-align: center;
-    font-size: 1.6rem;
-    letter-spacing: 0.2rem;
-    padding-bottom: 5%;
-  }
-  .mainContainer .clientSection {
-    padding: 0%;
-    margin: 0%;
-    margin-top: 20%;
-    padding: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    color: var(--Color_White);
-    border: none;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: var(--Color_White);
-  }
-  .mainContainer .clientSection h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    margin-bottom: 2%;
-    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-  }
-  .mainContainer .clientSection .clientSectionItem {
-    width: 75%;
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 0.1rem solid var(--Color_AuxMain);
-    border-radius: 1rem;
-    padding: 5%;
-  }
-  .mainContainer .clientSection .clientSectionItem .section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    justify-content: center;
-    align-items: center;
-    border: none;
-  }
-  .mainContainer .clientSection .clientSectionItem .section h3 {
-    color: var(--Color_White);
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
-  }
-  .mainContainer .clientSection .formTrigger {
-    font-size: 1.2rem;
-    padding: 0.5%;
-    margin-top: 5%;
-    width: 40%;
-    background-color: #0b162f;
-    border: 0.05rem solid #487bb7;
-    border-radius: 0.5rem;
-    color: #fff;
-  }
-  .mainContainer .clientSection .formTrigger:hover {
-    scale: 1.1;
-    border: 0.05rem solid #facd34;
-    text-shadow: 1px 1px 2px #93a9ac;
-    color: #facd34;
-  }
-  .mainContainer .section_3X3AboutUs {
-    margin-top: 20%;
-    border-radius: 1rem;
-    background-color: var(--Color_60);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .mainContainer .section_3X3AboutUs .imgClassB {
-    width: 100%;
-    opacity: 0.6;
-    scale: 1;
-    margin-left: -5%;
-  }
-  .mainContainer .section_3X3AboutUs .imgClassB:hover {
-    opacity: 1;
-    scale: 1;
-  }
-  .mainContainer .section_3X3AboutUs .imgClass {
-    scale: 1;
-    width: 100%;
-    opacity: 0.8;
-  }
-  .mainContainer .section_3X3AboutUs .imgClass:hover {
-    opacity: 1;
-    scale: 1;
-  }
-  .mainContainer .section_3X3AboutUs .container3x3 {
-    color: var(--Color_White);
-    border-radius: 1rem;
-    padding-top: 2%;
-  }
-  .mainContainer .section_3X3AboutUs h4 {
-    margin-top: 10%;
-    font-size: x-small;
-    text-align: center;
-    letter-spacing: 0rem;
-    opacity: 0.5;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_1 {
-    margin-left: 0%;
-    border: 0.05rem solid var(--Color_AuxMain);
-    background-color: var(--Color_60);
-    margin-right: 5%;
-    padding-bottom: 1%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_1 h4 {
-    padding-right: 0%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_2 {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    border: 0.05rem solid var(--Color_AuxMain);
-    background-color: var(--Color_60);
-    margin-bottom: 10%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_2 h4 {
-    margin-top: 3%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_3 {
-    border: 0.05rem solid var(--Color_AuxMain);
-    background-color: var(--Color_60);
-    margin-left: 5%;
-  }
-  .mainContainer .section_3X3AboutUs .section_3X3_3 h4 {
-    padding-left: 0%;
-  }
-  .mainContainer .formSection {
-    margin-top: 20%;
-    margin-bottom: 5%;
-    background-color: transparent;
-    padding: 5%;
-    color: var(--Color_AuxMain);
-    font-size: 1.2rem;
-  }
-  .mainContainer .formSection .formSectionA {
-    padding: 5%;
-    background-color: var(--Color_60);
-    border-radius: 1rem;
-    border: 0.05rem solid var(--Color_AuxMain);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    justify-content: center;
-  }
-  .mainContainer .formSection .formSectionA .form-control {
-    border: 0.05rem solid var(--Color_AuxMain);
-    background-color: rgba(255, 255, 255, 0.07);
-    color: var(--Color_White);
-  }
-  .mainContainer .formSection .formSectionA select {
-    border: 0.05rem solid var(--Color_AuxMain);
-    background-color: rgba(255, 255, 255, 0.07);
-    color: var(--Color_White);
-    margin-top: 8%;
-    margin-bottom: 5%;
-  }
-  .mainContainer .formSection .formSectionA .formTrigger {
-    font-size: medium;
-    width: 100%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 5%;
-    border: 0.05rem solid var(--Color_AuxMain);
-    background-color: rgba(255, 255, 255, 0.07);
-    color: var(--Color_White);
-    border-radius: 0.5rem;
-  }
-  .mainContainer .formSection .formSectionA .formTrigger:hover {
-    scale: 1.1;
-    border: 0.05rem solid var(--Color_30);
-    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-    color: var(--Color_30);
-  }
-  .mainContainer .formSection .formSectionA .checkGroup {
-    padding: 2%;
-    margin: 0%;
-    font-size: small;
-  }
-  .mainContainer .formSection .formSectionA .checkGroup label {
-    margin-left: 2%;
-  }
-  .mainContainer .formSection .formSectionB {
-    margin-top: 10%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 5%;
-    padding-top: 1%;
-    color: var(--Color_AuxMain);
-  }
-  .mainContainer .formSection .formSectionB h2 {
-    color: var(--Color_White);
-    font-size: 3rem;
-    font-weight: 600;
-    padding: 5%;
-    text-align: left;
-    width: 100%;
-  }
-  .mainContainer .formSection .formSectionB h3 {
-    color: var(--Color_White);
-  }
-  .mainContainer .formSection .formSectionB .formImg {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .mainContainer .formSection .formSectionB .formImg .img {
-    width: 40%;
-  }
-  footer {
-    background-color: var(--Color_60);
-    border-radius: 2em;
-    color: var(--Color_AuxSec);
-  }
-  footer .logo {
-    padding: 5%;
-    opacity: 0.8;
-    width: 100%;
-  }
-  footer .nav-link {
-    color: var(--Color_White);
-    font-size: small;
-    opacity: 0.5;
-  }
-  footer .nav-link:hover {
-    color: #487bb7;
-    font-size: large;
-  }
-  footer .smContainer {
-    width: 70%;
-    padding-top: 0%;
-    margin: 1%;
-    opacity: 0.5;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .navBarSection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 0%;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-  }
 }
 
 @media all and (min-width: 768px) {
-  .landingSection {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .landingSection .landingRow {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .landingSection .landingRow .logoSection {
+    height: 20%;
+  }
+  .landingSection .landingRow .logoSection .logo {
+    width: 15%;
   }
   .landingSection .landingRow .textSection {
-    margin-top: 0%;
+    height: 40%;
   }
   .landingSection .landingRow .textSection h2 {
     font-size: 1.5rem;
@@ -1596,12 +995,7 @@ footer .navBarSection {
     letter-spacing: 0.7rem;
   }
   .landingSection .landingRow .logoContainer {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    height: 60%;
   }
   .landingSection .landingRow .logoContainer .logo {
     margin-left: 0%;
@@ -1617,10 +1011,6 @@ footer .navBarSection {
   .navBarSection .logo {
     max-width: 10%;
   }
-  .mainContainer .espacioDigitalSection {
-    padding-top: 10%;
-    padding-bottom: 5%;
-  }
   .mainContainer .espacioDigitalSection .text h3 {
     font-size: 1.4rem;
     letter-spacing: 0.6rem;
@@ -1629,67 +1019,10 @@ footer .navBarSection {
     font-size: 1.2rem;
     letter-spacing: 0.4rem;
   }
-  .mainContainer .espacioDigitalSection .img {
-    width: 10%;
-  }
   .mainContainer .packSection .packSection1 .container p {
     padding-top: 8%;
     padding-bottom: 8%;
     font-size: medium;
-  }
-  .mainContainer .packSection .packSection2 {
-    padding: 0%;
-    margin: 0%;
-    border: 0.05rem solid var(--Color_AuxMain);
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  .mainContainer .packSection .packSection2 .sTop {
-    margin-top: -1%;
-    margin-bottom: 2%;
-  }
-  .mainContainer .packSection .packSection2 .sbottom {
-    height: 10%;
-    margin-top: 1%;
-  }
-  .mainContainer .packSection .packSection2 .packSection2Top {
-    padding-bottom: 2%;
-  }
-  .mainContainer .packSection .packSection2 .packSection2Top .packSection2A h3 {
-    font-size: 4rem;
-    letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 10px var(--Color_AuxSec);
-    text-align: center;
-  }
-  .mainContainer .packSection .packSection2 .packSection2Top .packSection2A p {
-    margin-top: 2%;
-    width: 95%;
-    text-align: justify;
-    padding-right: 0%;
-    color: var(--Color_AuxSec);
-    font-size: large;
-  }
-  .mainContainer .packSection .packSection2 .packSection2B {
-    padding: 0%;
-    margin: 0%;
-    text-align: center;
-  }
-  .mainContainer .packSection .packSection2 .packSection2B .img {
-    width: 50%;
-  }
-  .mainContainer .packSection .packSection2 .packSection2C {
-    font-size: large;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    color: var(--Color_White);
-    text-shadow: 1px 1px 2px var(--Color_AuxSec);
-    margin-top: 2%;
-  }
-  .mainContainer .packSection .packSection2 .packSection2C .white {
-    color: var(--Color_30);
-    font-weight: bolder;
-    opacity: 0.8;
-    text-shadow: 0px 0px 0px var(--Color_AuxSec);
   }
   .mainContainer .packSection .packSection3 .packSection3Btn h4 {
     font-size: 1.2rem;
@@ -1700,9 +1033,6 @@ footer .navBarSection {
   .mainContainer .section_3X3AboutUs .imgClassB {
     margin-left: 0%;
     width: 90%;
-  }
-  .mainContainer .section_3X3AboutUs .imgClass {
-    scale: 1;
   }
   .mainContainer .section_3X3AboutUs h4 {
     margin-top: 5%;
@@ -2214,10 +1544,6 @@ footer .navBarSection {
 }
 
 @media (min-width: 1200px) {
-  .body {
-    min-width: 1200px;
-    max-width: 1800px;
-  }
   .landingSection .landingRow .textSection h2 {
     font-size: 3rem;
     letter-spacing: 0.7rem;
